@@ -1,0 +1,5 @@
+## Append samples you want in your CSV to this file as resources ##
+resources:
+- ingress_v1alpha1_ingress.yaml
+- ingress_v1alpha1_user.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples

@@ -1,0 +1,27 @@
+apiVersion: ingress.ingrauth.h4n.io/v1alpha1
+kind: Ingress
+metadata:
+  name: ingress-sample
+  labels:
+    h4n.io/ingress: ingress-sample
+spec:
+  userSelector:
+    h4n.io/ingress: ingress-sample
+
+  template:
+    metadata:
+      labels:
+        h4n.io/ingress: ingress-sample
+
+    spec:
+      rules:
+      - host: test.local
+        http:
+          paths:
+          - pathType: Prefix
+            path: "/"
+            backend:
+              service:
+                name: podinfo
+                port: 
+                  number: 8080

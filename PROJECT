@@ -1,0 +1,28 @@
+domain: ingrauth.h4n.io
+layout:
+- go.kubebuilder.io/v3
+plugins:
+  manifests.sdk.operatorframework.io/v2: {}
+  scorecard.sdk.operatorframework.io/v2: {}
+projectName: ingrauth-operator
+repo: github.com/hbjydev/ingrauth-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: ingrauth.h4n.io
+  group: ingress
+  kind: Ingress
+  path: github.com/hbjydev/ingrauth-operator/api/v1alpha1
+  version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: ingrauth.h4n.io
+  group: ingress
+  kind: User
+  path: github.com/hbjydev/ingrauth-operator/api/v1alpha1
+  version: v1alpha1
+version: "3"

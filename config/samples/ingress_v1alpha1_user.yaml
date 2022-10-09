@@ -1,0 +1,6 @@
+apiVersion: ingress.ingrauth.h4n.io/v1alpha1
+kind: User
+metadata:
+  name: user-sample
+  labels:
+    h4n.io/ingress: ingress-sample
